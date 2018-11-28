@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+        <title>Prueba JS</title>
+    </head>
+    <header></header>
+    <body>
+            <div class="btn-group dropup">
+                    <button type="button" class="btn btn-default">Dropup</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="caret"></span>
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <!-- Dropdown menu links -->
+                    </ul>
+                  </div>
+        <h1>Hola Prueba1 js</h1>
+        <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+                Loading state
+              </button>
+              
+              <script>
+                $('#myButton').on('click', function () {
+                  var $btn = $(this).button('loading')
+                  // business logic...
+                  $btn.button('reset')
+                })
+              </script>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+...more buttons...
+<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Link with href
+      </a>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Button with data-target
+      </button>
+      <div class="collapse" id="collapseExample">
+        <div class="well">
+          ...
+        </div>
+      </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $(function () {
+  $('[data-toggle="popover"]').popover()
+})
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+</script>
+
+        <form>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Nombre</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Clave</span>
+                <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon2">
+                <hr/>
+                <hr/>
+            </div>
+            <input type="button" value="Enviar">
+        </form>
+        <p name="p" id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi recusandae aut blanditiis aperiam natus consectetur ullam, sunt, molestiae libero nesciunt, ratione delectus soluta. Enim tempore porro, eos voluptas voluptatem necessitatibus!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas ex ipsam eos cum quis assumenda explicabo officiis quaerat corrupti omnis. Corporis, voluptatem? Quidem, iusto fugiat qui aperiam deserunt facere?</p>
+       <a id="enlace" href="https://google.com.do">Ir a Google</a>
+       <img id="imagen" style="margin:0; border:0;" src="logo.png" />
+       <p id="parrafo" style="font-weight: bold;">...</p>
+       <p id="parrafo" class="normal">...</p>
+       <input type="button" value="Pinchame y verás" onclick="prueba()" />
+       <div onclick="alert('Has pinchado con el ratón');" onmouseover="alert('Acabas de pasar el ratón por encima');">
+          Puedes pinchar sobre este elemento o simplemente pasar el ratón por encima
+        </div>
+        <div id="contenidos" style="width:150px; height:60px; border:thin solid silver">
+            Sección de contenidos...
+          </div>
+          <div id="contenidos" style="width:150px; height:60px; border:thin solid silver" onmouseover="document.getElementById('contenidos').style.borderColor='black';" onmouseout="document.getElementById('contenidos').style.borderColor='silver';">
+              Sección de contenidos...
+            </div>
+
+            <div id="contenidos" style="width:150px; height:60px; border:thin solid silver" onmouseover="this.style.borderColor='black';" onmouseout="this.style.borderColor='silver';">
+                Sección de contenidos...
+              </div>
+       <script >
+         window.onload = function() {
+          var parrafo = document.createElement("p");
+          var contenido = document.createTextNode("Hola Mundo!");
+          parrafo.appendChild(contenido);
+          document.body.appendChild(parrafo);
+          //eliminar nodo
+          var parrafo = document.getElementById("p");
+          if(parrafo=true)
+          {
+            parrafo.parentNode.removeChild(parrafo);
+          }
+          
+          else{
+            var parrafo = document.createElement("p");
+          var contenido = document.createTextNode("parrafo no eliminado");
+          parrafo.appendChild(contenido);
+          document.body.appendChild(parrafo);
+          }
+
+          //enlace 
+          var enlace = document.getElementById("enlace");
+          alert(enlace.href);
+
+          
+          //imagens
+          var imagen = document.getElementById("imagen");
+          alert(imagen.style.margin);
+          //csss
+          var parrafo = document.getElementById("parrafo");
+          alert(parrafo.style.fontWeight);  // muestra "bold"
+ 
+          var parrafo = document.getElementById("parrafo");
+alert(parrafo.class); // muestra "undefined"
+alert(parrafo.className); // muestra "normal"
+ function prueba()
+ {
+   alert('eweo');
+ }
+
+
+          /*var cabecera = document.getElementById("p");
+       var parrafos = document.getElementsByTagName("p");
+var primerParrafo = parrafos[0];
+var enlaces = primerParrafo.getElementsByTagName("a");*/
+}
+        </script>
+    </body>
+    <footer></footer>
+</html>

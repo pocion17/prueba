@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="persona.xsd">
+<?xml-stylesheet type="text/xsl"  href="persona.xsl"?>
+<!--<!DOCTYPE personas SYSTEM "persona.dtd">-->
+<personas>
+    <nombre>Luis</nombre>
+    <direccion>Respaldo</direccion>
+    <tel>123456789</tel>
+</personas>

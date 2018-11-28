@@ -1,0 +1,6 @@
+<!DOCTYPE personas[
+<!ELEMENT personas(nombre,direccion,tel)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+]>
